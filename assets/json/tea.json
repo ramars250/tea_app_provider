@@ -1,0 +1,340 @@
+{
+  "tea_data": [
+    {
+      "kind_title": "第一味青茶系",
+      "items": [
+        {
+          "item_title": "招牌高山青",
+          "size": [
+            "L",
+            "XL\n+20元"
+          ],
+          "b_price": 20,
+          "cold_price": 35,
+          "hot_price": 35
+        },
+        {
+          "item_title": "青茶3Q",
+          "size": [
+            "L"
+          ],
+          "cold_price": 45,
+          "hot_price": 45
+        },
+        {
+          "item_title": "甘蔗青了",
+          "size": [
+            "L"
+          ],
+          "cold_price": 60
+        },
+        {
+          "item_title": "靚奶凍",
+          "size": [
+            "L"
+          ],
+          "cold_price": 55,
+          "hot_price": 55
+        },
+        {
+          "item_title": "冬瓜青茶",
+          "size": [
+            "L"
+          ],
+          "cold_price": 40
+        }
+      ]
+    },
+    {
+      "kind_title": "喝好茶",
+      "items": [
+        {
+          "item_title": "108茶王",
+          "size": [
+            "L",
+            "XL\n+20元"
+          ],
+          "b_price": 20,
+          "cold_price": 37
+        },
+        {
+          "item_title": "茉香綠茶",
+          "size": [
+            "L",
+            "XL\n+20元"
+          ],
+          "b_price": 20,
+          "cold_price": 35,
+          "hot_price": 35
+        },
+        {
+          "item_title": "冷泡綠茶",
+          "size": [
+            "L",
+            "XL\n+20元"
+          ],
+          "b_price": 20,
+          "cold_price": 35
+        },
+        {
+          "item_title": "熟成紅茶",
+          "size": [
+            "L",
+            "XL\n+20元"
+          ],
+          "b_price": 20,
+          "cold_price": 35
+        },
+        {
+          "item_title": "日月潭紅茶",
+          "size": [
+            "L",
+            "XL\n+20元"
+          ],
+          "b_price": 20,
+          "cold_price": 35,
+          "hot_price": 35
+        },
+        {
+          "item_title": "炭焙鐵觀音",
+          "size": [
+            "L",
+            "XL\n+20元"
+          ],
+          "b_price": 20,
+          "cold_price": 35,
+          "hot_price": 35
+        }
+      ]
+    },
+    {
+      "kind_title": "喝鮮果",
+      "items": [
+        {
+          "item_title": "日月蘋安",
+          "size": [
+            "L"
+          ],
+          "cold_price": 55
+        },
+        {
+          "item_title": "108蘋香",
+          "size": [
+            "L"
+          ],
+          "cold_price": 58
+        },
+        {
+          "item_title": "108柚香",
+          "size": [
+            "L"
+          ],
+          "cold_price": 55
+        },
+        {
+          "item_title": "芒果鳳茶果粒茶",
+          "size": [
+            "L"
+          ],
+          "cold_price": 65
+        },
+        {
+          "item_title": "葡萄柚果粒茶",
+          "size": [
+            "L"
+          ],
+          "cold_price": 65
+        },
+        {
+          "item_title": "鮮萃百香綠",
+          "size": [
+            "L"
+          ],
+          "cold_price": 55,
+          "hot_price": 55
+        },
+        {
+          "item_title": "熟成果香紅茶",
+          "size": [
+            "L"
+          ],
+          "cold_price": 50
+        },
+        {
+          "item_title": "冬瓜檸檬",
+          "size": [
+            "L"
+          ],
+          "cold_price": 50
+        },
+        {
+          "item_title": "蘋果冰醋",
+          "size": [
+            "L"
+          ],
+          "cold_price": 50
+        },
+        {
+          "item_title": "奴才好了沒(季節限定)",
+          "size": [
+            "L"
+          ],
+          "cold_price": 75,
+          "hot_price": 75
+        },
+        {
+          "item_title": "焦糖美莓(季節限定)",
+          "size": [
+            "L"
+          ],
+          "cold_price": 79
+        }
+      ]
+    },
+    {
+      "kind_title": "喝奶蓋",
+      "items": [
+        {
+          "item_title": "紅茶芝芝",
+          "size": [
+            "L"
+          ],
+          "cold_price": 60,
+          "hot_price": 60
+        },
+        {
+          "item_title": "茉香芝芝",
+          "size": [
+            "L"
+          ],
+          "cold_price": 60,
+          "hot_price": 60
+        },
+        {
+          "item_title": "鐵觀音芝芝",
+          "size": [
+            "L"
+          ],
+          "cold_price": 60,
+          "hot_price": 60
+        },
+        {
+          "item_title": "青茶芝芝",
+          "size": [
+            "L"
+          ],
+          "cold_price": 60,
+          "hot_price": 60
+        }
+      ]
+    },
+    {
+      "kind_title": "古早味",
+      "items": [
+        {
+          "item_title": "古早味冬瓜茶",
+          "size": [
+            "L"
+          ],
+          "cold_price": 30
+        },
+        {
+          "item_title": "冬瓜仙草",
+          "size": [
+            "L"
+          ],
+          "cold_price": 40
+        },
+        {
+          "item_title": "蜂蜜綠茶",
+          "size": [
+            "L"
+          ],
+          "cold_price": 45
+        },
+        {
+          "item_title": "梅果綠茶",
+          "size": [
+            "L"
+          ],
+          "cold_price": 45,
+          "hot_price": 45
+        },
+        {
+          "item_title": "蜂蜜檸檬",
+          "size": [
+            "L"
+          ],
+          "cold_price": 55
+        },
+        {
+          "item_title": "甘檸冷泡",
+          "size": [
+            "L"
+          ],
+          "cold_price": 65
+        },
+        {
+          "item_title": "多多綠茶",
+          "size": [
+            "L"
+          ],
+          "cold_price": 55
+        }
+      ]
+    },
+    {
+      "kind_title": "吃好料",
+      "items": [
+        {
+          "item_title": "當代雙Q",
+          "size": [
+            "L"
+
+          ],
+          "cold_price": 60,
+          "hot_price": 60
+        },
+        {
+          "item_title": "百香鮮QQ",
+          "size": [
+            "L"
+          ],
+          "cold_price": 65,
+          "hot_price": 65
+        },
+        {
+          "item_title": "紅豆粉粿鮮奶",
+          "size": [
+            "L"
+          ],
+          "cold_price": 60,
+          "hot_price": 60
+        },
+        {
+          "item_title": "紫芋西米露",
+          "size": [
+            "L"
+          ],
+          "cold_price": 65,
+          "hot_price": 65
+        },
+        {
+          "item_title": "月亮熬奶(黑糖鮮奶珍珠)",
+          "size": [
+            "L"
+          ],
+          "cold_price": 75,
+          "hot_price": 75
+        },
+        {
+          "item_title": "冬梅粉粿",
+          "size": [
+            "L"
+          ],
+          "cold_price": 55
+        }
+      ]
+    }
+  ]
+}
