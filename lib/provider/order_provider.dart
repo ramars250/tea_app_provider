@@ -21,20 +21,34 @@ class OrderProvider extends ChangeNotifier {
     }
     notifyListeners();
   }
+
   addTeaTitle(String t) {
     teaTitle = t;
     notifyListeners();
   }
+
   addCupSize(String c) {
     cupSize = c;
     notifyListeners();
   }
+
   addIce(String i) {
     ice = i;
     notifyListeners();
   }
+
   addSweet(String s) {
     sweet = s;
+    notifyListeners();
+  }
+
+  addTeaPrice(int t) {
+    teaPrice = t;
+    notifyListeners();
+  }
+
+  addCupPrice(int c) {
+    cupPrice = c;
     notifyListeners();
   }
 

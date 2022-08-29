@@ -15,6 +15,7 @@ class OrderPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final teaList = Provider.of<TeaProvider>(context);
     final teaData = teaList.selected;
+    final detail = Provider.of<OrderProvider>(context);
     return Dialog(
       child: Container(
         padding: EdgeInsets.only(left: 10, right: 10),
@@ -86,7 +87,7 @@ class OrderPage extends StatelessWidget {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Container(child: Text('總金額${Provider.of<OrderProvider>(context, listen: true).totalPrice}元')),
+                          Container(child: Text('總金額${detail.teaPrice}元')),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [

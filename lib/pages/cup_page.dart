@@ -23,7 +23,13 @@ class CupPage extends StatelessWidget {
             itemBuilder: (_, index) {
               return GestureDetector(
                 onTap: () {
-                  Provider.of<OrderProvider>(context, listen: false).addCupSize(item.size[index]);
+                  Provider.of<OrderProvider>(context, listen: false)
+                      .addCupSize(item.size[index]);
+                  index == 0
+                      ? Provider.of<OrderProvider>(context, listen: false)
+                          .addCupPrice(item.bPrice)
+                      : Provider.of<OrderProvider>(context, listen: false)
+                          .addCupPrice(0);
                 },
                 child: Container(
                     alignment: Alignment.center,
