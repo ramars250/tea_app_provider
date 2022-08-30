@@ -38,7 +38,6 @@ class TeaPage extends StatelessWidget {
                                 teaList.setItemSelected(teaData.items[index]);
                                 Provider.of<OrderProvider>(context, listen: false).addTeaTitle(teaData.items[index].itemTitle);
                                 Provider.of<OrderProvider>(context, listen: false).addTeaPrice(teaData.items[index].coldPrice);
-                                Provider.of<OrderProvider>(context, listen: false).addTotalPrice();
                                 // Navigator.push(context, MaterialPageRoute(builder: (itemList) => DetailPage()));
                                 showDialog(
                                   context: context,

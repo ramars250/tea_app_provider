@@ -87,7 +87,7 @@ class OrderPage extends StatelessWidget {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Container(child: Text('總金額${detail.totalPrice}元')),
+                          Container(child: Text('總金額${detail.addTotalPrice()}元')),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -98,7 +98,6 @@ class OrderPage extends StatelessWidget {
                                 icon: Icon(Icons.remove, color: Colors.red),
                               ),
                               Container(
-                                padding: EdgeInsets.all(8),
                                 decoration: BoxDecoration(
                                     border: Border.all(color: Colors.grey)),
                                 child: Text(detail.qty.toString()),
@@ -124,10 +123,7 @@ class OrderPage extends StatelessWidget {
                           '訂購',
                           style: TextStyle(color: Colors.black),
                         ),
-                        onPressed: () {
-                          Provider.of<OrderProvider>(context, listen: false)
-                              .addName(textController.text);
-                        },
+                        onPressed: () {},
                       ),
                     ),
                   ],

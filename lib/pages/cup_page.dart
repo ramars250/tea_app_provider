@@ -25,7 +25,7 @@ class CupPage extends StatelessWidget {
                 onTap: () {
                   Provider.of<OrderProvider>(context, listen: false)
                       .addCupSize(item.size[index]);
-                  index == 0
+                  index == 1
                       ? Provider.of<OrderProvider>(context, listen: false)
                           .addCupPrice(item.bPrice)
                       : Provider.of<OrderProvider>(context, listen: false)
