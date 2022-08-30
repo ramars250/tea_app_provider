@@ -64,4 +64,8 @@ class OrderProvider extends ChangeNotifier {
   removeQty() {
     qty > 1 ? qty -= 1 : qty = 1;
   }
+
+  resetQTY() {
+    qty = 1;
+  }
 }

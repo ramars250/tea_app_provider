@@ -123,7 +123,10 @@ class OrderPage extends StatelessWidget {
                           '訂購',
                           style: TextStyle(color: Colors.black),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pop(context);
+                          Provider.of<OrderProvider>(context, listen: false).resetQTY();
+                        },
                       ),
                     ),
                   ],
