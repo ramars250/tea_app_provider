@@ -87,21 +87,26 @@ class OrderPage extends StatelessWidget {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Container(child: Text('總金額${detail.teaPrice}元')),
+                          Container(child: Text('總金額${detail.totalPrice}元')),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               IconButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  detail.removeQty();
+                                },
                                 icon: Icon(Icons.remove, color: Colors.red),
                               ),
                               Container(
+                                padding: EdgeInsets.all(8),
                                 decoration: BoxDecoration(
                                     border: Border.all(color: Colors.grey)),
-                                child: Text('1'),
+                                child: Text(detail.qty.toString()),
                               ),
                               IconButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  detail.addQty();
+                                },
                                 icon: Icon(Icons.add, color: Colors.green),
                               ),
                             ],
@@ -119,7 +124,10 @@ class OrderPage extends StatelessWidget {
                           '訂購',
                           style: TextStyle(color: Colors.black),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Provider.of<OrderProvider>(context, listen: false)
+                              .addName(textController.text);
+                        },
                       ),
                     ),
                   ],

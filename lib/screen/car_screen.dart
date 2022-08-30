@@ -23,6 +23,7 @@ class CarScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  Text(detail.name, style: TextStyle(fontSize: 30)),
                   Text(detail.teaTitle, style: TextStyle(fontSize: 36)),
                   Row(
                     children: [

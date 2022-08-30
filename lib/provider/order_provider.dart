@@ -7,49 +7,52 @@ class OrderProvider extends ChangeNotifier {
   String ice;
   String sweet;
   String feed;
-  int qty;
+  int qty = 1;
   int totalPrice;
   int teaPrice;
-  int cupPrice;
+  int cupPrice = 0;
   int feedPrice;
 
   addName(String n) {
-    if (n = null) {
-      name = '';
-    } else {
+    if (n != null) {
       name = n;
+    } else {
+      name = '';
     }
-    notifyListeners();
   }
 
   addTeaTitle(String t) {
     teaTitle = t;
-    notifyListeners();
   }
 
   addCupSize(String c) {
     cupSize = c;
-    notifyListeners();
   }
 
   addIce(String i) {
     ice = i;
-    notifyListeners();
   }
 
   addSweet(String s) {
     sweet = s;
-    notifyListeners();
   }
 
   addTeaPrice(int t) {
     teaPrice = t;
-    notifyListeners();
   }
 
   addCupPrice(int c) {
     cupPrice = c;
-    notifyListeners();
   }
 
+  addTotalPrice() {
+    totalPrice = teaPrice;
+    notifyListeners();
+  }
+  addQty() {
+    qty += 1;
+  }
+  removeQty() {
+    qty > 1 ? qty -= 1 : qty = 1;
+  }
 }
