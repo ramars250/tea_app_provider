@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tea_app/provider/customized_provider.dart';
+import 'package:tea_app/provider/order_provider.dart';
 
 class FeedPage extends StatelessWidget {
   const FeedPage({Key key}) : super(key: key);
@@ -21,23 +22,30 @@ class FeedPage extends StatelessWidget {
             physics: NeverScrollableScrollPhysics(),
             itemCount: customerList.customerList.cData[2].feed.length,
             itemBuilder: (_, index) {
-              List<int> selectedFeed = [];
+              // List<int> selectedFeed = [];
               return GestureDetector(
                 onTap: () {
                   customerList.setFeedSelected(customerList.customerList.cData[2].feed[index]);
-                  selectedFeed.contains(index)
-                      ? selectedFeed.remove(index)
-                      : selectedFeed.add(index);
-                  selectedFeed.length > 2
-                      ? selectedFeed.clear()
-                      : selectedFeed.length;
-                  print(customerList.isSelected.title);
+                  Provider.of<OrderProvider>(context, listen: false).addSelectedFeed(index);
+                  Provider.of<OrderProvider>(context, listen: false).addFeedPrice(customerList.customerList.cData[2].feed[index].price);
+                  Provider.of<OrderProvider>(context, listen: false).addFeedTitle(customerList.customerList.cData[2].feed[index].title);
+                  // selectedFeed.contains(index)
+                  //     ? selectedFeed.remove(index)
+                  //     : selectedFeed.add(index);
+                  // selectedFeed.length > 2
+                  //     ? selectedFeed.clear()
+                  //     : selectedFeed.length;
+                  print(context.read<OrderProvider>().feedPrice);
+                  Provider.of<OrderProvider>(context, listen: false)
+                      .addFeedId(index);
                 },
                 child: Container(
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(10)),
-                      color: Colors.grey[300]),
+                      color: context.read<OrderProvider>().selectedFeed.contains(index)
+                          ? Colors.orange[300]
+                          : Colors.grey[300]),
                   child: Text(
                       '${customerList.customerList.cData[2].feed[index].title} \n+${customerList.customerList.cData[2].feed[index].price}元',
                       style: TextStyle(fontSize: 12),

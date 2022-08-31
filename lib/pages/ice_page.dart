@@ -30,7 +30,10 @@ class IcePage extends StatelessWidget {
             itemBuilder: (_, index) {
               return GestureDetector(
                 onTap: () {
-                  Provider.of<OrderProvider>(context, listen: false).addIce(customerList.customerList.cData[0].iceCubes[index]);
+                  Provider.of<OrderProvider>(context, listen: false).addIce(
+                      customerList.customerList.cData[0].iceCubes[index]);
+                  Provider.of<OrderProvider>(context, listen: false)
+                      .addIceId(index);
                 },
                 child: Container(
                     width: 50,
@@ -38,7 +41,9 @@ class IcePage extends StatelessWidget {
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(10)),
-                        color: Colors.grey[300]),
+                        color: context.read<OrderProvider>().iceId == index
+                            ? Colors.orange[300]
+                            : Colors.grey[300]),
                     child: Text(
                         customerList.customerList.cData[0].iceCubes[index],
                         style: TextStyle(fontSize: 12))),

@@ -11,7 +11,8 @@ class SweetPage extends StatelessWidget {
     // final customerList = Provider.of<CustomizedProvider>(context);
     return Container(
       alignment: Alignment.centerLeft,
-      child: Consumer<CustomizedProvider>(builder: (context, customerList, child) {
+      child:
+          Consumer<CustomizedProvider>(builder: (context, customerList, child) {
         return GridView.builder(
             shrinkWrap: true,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -24,13 +25,18 @@ class SweetPage extends StatelessWidget {
             itemBuilder: (_, index) {
               return GestureDetector(
                 onTap: () {
-                  Provider.of<OrderProvider>(context, listen: false).addSweet(customerList.customerList.cData[1].sewwtness[index]);
+                  Provider.of<OrderProvider>(context, listen: false).addSweet(
+                      customerList.customerList.cData[1].sewwtness[index]);
+                  Provider.of<OrderProvider>(context, listen: false)
+                      .addSweetId(index);
                 },
                 child: Container(
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(10)),
-                      color: Colors.grey[300]),
+                      color: context.read<OrderProvider>().sweetId == index
+                          ? Colors.orange[300]
+                          : Colors.grey[300]),
                   child: Text(
                       customerList.customerList.cData[1].sewwtness[index],
                       style: TextStyle(fontSize: 12)),

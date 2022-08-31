@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 
 class OrderProvider extends ChangeNotifier {
   String name;
@@ -6,50 +7,75 @@ class OrderProvider extends ChangeNotifier {
   String cupSize;
   String ice;
   String sweet;
-  String feed;
+  List<String> feedTitle = [];
   int qty = 1;
   int totalPrice;
   int teaPrice;
   int cupPrice = 0;
-  int feedPrice;
+  int cupId;
+  int iceId;
+  int sweetId;
+  int feedId;
+  List<int> selectedFeed = [];
+  List<int> feedPrice = [];
+
+  addCupId(int i) {
+    cupId = i;
+  }
+
+  addIceId(int i) {
+    iceId = i;
+  }
+
+  addSweetId(int i) {
+    sweetId = i;
+  }
+
+  addFeedId(int i) {
+    feedId = i;
+  }
+
+  addSelectedFeed(int i) {
+    selectedFeed.contains(i) ? selectedFeed.remove(i) : selectedFeed.add(i);
+    selectedFeed.length > 2 ? selectedFeed.clear() : selectedFeed.length;
+  }
+  addFeedPrice(int i) {
+    feedPrice.contains(i) ? feedPrice.remove(i) : feedPrice.add(i);
+  }
+  addFeedTitle(String f) {
+    feedTitle.contains(f) ? feedTitle.remove(f) : feedTitle.add(f);
+  }
 
   addName(String n) {
-    if (n = null) {
-      name = '';
-    } else {
+    if (n != null) {
       name = n;
+    } else {
+      name = '';
     }
-    notifyListeners();
   }
 
   addTeaTitle(String t) {
     teaTitle = t;
-    notifyListeners();
   }
 
   addCupSize(String c) {
     cupSize = c;
-    notifyListeners();
   }
 
   addIce(String i) {
     ice = i;
-    notifyListeners();
   }
 
   addSweet(String s) {
     sweet = s;
-    notifyListeners();
   }
 
   addTeaPrice(int t) {
     teaPrice = t;
-    notifyListeners();
   }
 
   addCupPrice(int c) {
     cupPrice = c;
-    notifyListeners();
   }
 
   addTotalPrice() {
@@ -65,7 +91,7 @@ class OrderProvider extends ChangeNotifier {
     qty > 1 ? qty -= 1 : qty = 1;
   }
 
-  resetQTY() {
+  setQty() {
     qty = 1;
   }
 }

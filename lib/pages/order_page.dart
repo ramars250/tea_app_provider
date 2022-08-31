@@ -98,9 +98,10 @@ class OrderPage extends StatelessWidget {
                                 icon: Icon(Icons.remove, color: Colors.red),
                               ),
                               Container(
+                                padding: EdgeInsets.all(8),
                                 decoration: BoxDecoration(
                                     border: Border.all(color: Colors.grey)),
-                                child: Text(detail.qty.toString()),
+                                child: Text(context.read<OrderProvider>().qty.toString()),
                               ),
                               IconButton(
                                 onPressed: () {
@@ -124,8 +125,10 @@ class OrderPage extends StatelessWidget {
                           style: TextStyle(color: Colors.black),
                         ),
                         onPressed: () {
+                          Provider.of<OrderProvider>(context, listen: false)
+                              .addName(textController.text);
                           Navigator.pop(context);
-                          Provider.of<OrderProvider>(context, listen: false).resetQTY();
+                          detail.setQty();
                         },
                       ),
                     ),
