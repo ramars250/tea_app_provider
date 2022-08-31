@@ -30,13 +30,16 @@ class CupPage extends StatelessWidget {
                           .addCupPrice(item.bPrice)
                       : Provider.of<OrderProvider>(context, listen: false)
                           .addCupPrice(0);
-                  Provider.of<OrderProvider>(context, listen: false).addCupId(index);
+                  Provider.of<OrderProvider>(context, listen: false)
+                      .addCupId(index);
                 },
                 child: Container(
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(10)),
-                        color: context.read<OrderProvider>().cupId == index ? Colors.orange[300] : Colors.grey[300]),
+                        color: context.read<OrderProvider>().cupId == index
+                            ? Colors.orange[300]
+                            : Colors.grey[300]),
                     child: Text(item.size[index],
                         style: TextStyle(fontSize: 12),
                         textAlign: TextAlign.center)),

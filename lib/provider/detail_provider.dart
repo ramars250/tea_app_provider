@@ -16,5 +16,4 @@ class DetailProvider extends ChangeNotifier {
   setActiveItem(DetailItems i) {
     _avtiveItem = i;
   }
-
 }

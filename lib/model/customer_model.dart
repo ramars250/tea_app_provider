@@ -4,14 +4,15 @@ class CustomerList {
   CustomerList({this.cData});
 
   factory CustomerList.fromJson(Map<String, dynamic> json) => CustomerList(
-    cData: List<CustomerData>.from(json['customer_list'].map((x) => CustomerData.fromJson(x))),
-  );
-  // {
-  //   var list = json['customer_list'] as List;
-  //   List<CustomerData> data =
-  //       list.map((e) => CustomerData.fromJson(e)).toList();
-  //   return CustomerList(cData: data);
-  // }
+        cData: List<CustomerData>.from(
+            json['customer_list'].map((x) => CustomerData.fromJson(x))),
+      );
+// {
+//   var list = json['customer_list'] as List;
+//   List<CustomerData> data =
+//       list.map((e) => CustomerData.fromJson(e)).toList();
+//   return CustomerList(cData: data);
+// }
 }
 
 class CustomerData {
@@ -41,7 +42,7 @@ class Feed {
   Feed({this.title, this.price});
 
   factory Feed.fromJson(Map<String, dynamic> json) => Feed(
-    title: json['title'],
-    price: json['price'],
-  );
+        title: json['title'],
+        price: json['price'],
+      );
 }

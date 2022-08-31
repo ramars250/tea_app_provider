@@ -6,5 +6,11 @@ class OrderItemModel {
   String sweet;
   String feed;
 
-  OrderItemModel({this.name, this.teaTitle, this.cupSize, this.ice, this.sweet, this.feed});
+  OrderItemModel(
+      {this.name,
+      this.teaTitle,
+      this.cupSize,
+      this.ice,
+      this.sweet,
+      this.feed});
 }

@@ -39,11 +39,24 @@ class OrderProvider extends ChangeNotifier {
     selectedFeed.contains(i) ? selectedFeed.remove(i) : selectedFeed.add(i);
     selectedFeed.length > 2 ? selectedFeed.clear() : selectedFeed.length;
   }
+
   addFeedPrice(int i) {
     feedPrice.contains(i) ? feedPrice.remove(i) : feedPrice.add(i);
   }
+
   addFeedTitle(String f) {
     feedTitle.contains(f) ? feedTitle.remove(f) : feedTitle.add(f);
+  }
+
+  resetAll() {
+    cupId = null;
+    iceId = null;
+    sweetId = null;
+    feedId = null;
+    selectedFeed = [];
+    feedPrice = [];
+    // feedTitle = [];
+    qty = 1;
   }
 
   addName(String n) {
@@ -89,9 +102,5 @@ class OrderProvider extends ChangeNotifier {
 
   removeQty() {
     qty > 1 ? qty -= 1 : qty = 1;
-  }
-
-  setQty() {
-    qty = 1;
   }
 }

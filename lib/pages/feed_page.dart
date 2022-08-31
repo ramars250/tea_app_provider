@@ -25,10 +25,16 @@ class FeedPage extends StatelessWidget {
               // List<int> selectedFeed = [];
               return GestureDetector(
                 onTap: () {
-                  customerList.setFeedSelected(customerList.customerList.cData[2].feed[index]);
-                  Provider.of<OrderProvider>(context, listen: false).addSelectedFeed(index);
-                  Provider.of<OrderProvider>(context, listen: false).addFeedPrice(customerList.customerList.cData[2].feed[index].price);
-                  Provider.of<OrderProvider>(context, listen: false).addFeedTitle(customerList.customerList.cData[2].feed[index].title);
+                  customerList.setFeedSelected(
+                      customerList.customerList.cData[2].feed[index]);
+                  Provider.of<OrderProvider>(context, listen: false)
+                      .addSelectedFeed(index);
+                  Provider.of<OrderProvider>(context, listen: false)
+                      .addFeedPrice(
+                          customerList.customerList.cData[2].feed[index].price);
+                  Provider.of<OrderProvider>(context, listen: false)
+                      .addFeedTitle(
+                          customerList.customerList.cData[2].feed[index].title);
                   // selectedFeed.contains(index)
                   //     ? selectedFeed.remove(index)
                   //     : selectedFeed.add(index);
@@ -43,7 +49,10 @@ class FeedPage extends StatelessWidget {
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(10)),
-                      color: context.read<OrderProvider>().selectedFeed.contains(index)
+                      color: context
+                              .read<OrderProvider>()
+                              .selectedFeed
+                              .contains(index)
                           ? Colors.orange[300]
                           : Colors.grey[300]),
                   child: Text(

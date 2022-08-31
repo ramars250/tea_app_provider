@@ -9,9 +9,10 @@ class DetailItems {
   int qty;
 
   // final String feed;
-  DetailItems(
-      this.orderName, this.itemTitle, this.cupSize, this.iceCube, this.sweet, this.feed, this.qty);
+  DetailItems(this.orderName, this.itemTitle, this.cupSize, this.iceCube,
+      this.sweet, this.feed, this.qty);
 }
+
 //建立包含DetailItem模型的列表
 class DetailList {
   List<DetailItems> detailList;

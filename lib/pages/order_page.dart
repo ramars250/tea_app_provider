@@ -128,7 +128,7 @@ class OrderPage extends StatelessWidget {
                           Provider.of<OrderProvider>(context, listen: false)
                               .addName(textController.text);
                           Navigator.pop(context);
-                          detail.setQty();
+                          detail.resetAll();
                         },
                       ),
                     ),

@@ -10,6 +10,7 @@ class CustomizedProvider extends ChangeNotifier {
     customerList = await loadingCustomeJsonData();
     notifyListeners();
   }
+
   setFeedSelected(Feed feed) {
     isSelected = feed;
   }
