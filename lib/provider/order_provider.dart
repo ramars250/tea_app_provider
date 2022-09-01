@@ -7,7 +7,6 @@ class OrderProvider extends ChangeNotifier {
   String cupSize;
   String ice;
   String sweet;
-  List<String> feedTitle = [];
   int qty = 1;
   int totalPrice;
   int teaPrice;
@@ -17,6 +16,7 @@ class OrderProvider extends ChangeNotifier {
   int sweetId;
   int feedId;
   List<int> selectedFeed = [];
+  List<String> feedTitle = [];
   List<int> feedPrice = [];
 
   addCupId(int i) {
@@ -41,11 +41,12 @@ class OrderProvider extends ChangeNotifier {
   }
 
   addFeedPrice(int i) {
-    feedPrice.contains(i) ? feedPrice.remove(i) : feedPrice.add(i);
+    feedPrice.length < 2 ? feedPrice.add(i) : feedPrice.clear();
   }
 
   addFeedTitle(String f) {
     feedTitle.contains(f) ? feedTitle.remove(f) : feedTitle.add(f);
+    feedTitle.length > 2 ? feedTitle.clear() : feedTitle.length;
   }
 
   resetAll() {
@@ -55,7 +56,7 @@ class OrderProvider extends ChangeNotifier {
     feedId = null;
     selectedFeed = [];
     feedPrice = [];
-    // feedTitle = [];
+    // feedTitle = [];拿掉是因為目前如果重置會把購物車的內容也清除
     qty = 1;
   }
 

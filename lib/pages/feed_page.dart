@@ -22,7 +22,6 @@ class FeedPage extends StatelessWidget {
             physics: NeverScrollableScrollPhysics(),
             itemCount: customerList.customerList.cData[2].feed.length,
             itemBuilder: (_, index) {
-              // List<int> selectedFeed = [];
               return GestureDetector(
                 onTap: () {
                   customerList.setFeedSelected(
@@ -35,13 +34,7 @@ class FeedPage extends StatelessWidget {
                   Provider.of<OrderProvider>(context, listen: false)
                       .addFeedTitle(
                           customerList.customerList.cData[2].feed[index].title);
-                  // selectedFeed.contains(index)
-                  //     ? selectedFeed.remove(index)
-                  //     : selectedFeed.add(index);
-                  // selectedFeed.length > 2
-                  //     ? selectedFeed.clear()
-                  //     : selectedFeed.length;
-                  print(context.read<OrderProvider>().feedPrice);
+                  print(context.read<OrderProvider>().feedTitle);
                   Provider.of<OrderProvider>(context, listen: false)
                       .addFeedId(index);
                 },
